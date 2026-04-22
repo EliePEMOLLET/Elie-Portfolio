@@ -361,16 +361,12 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   scroll-behavior: smooth;
-}
-
-.container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-/* --- NAVIGATION --- */
-.navbar {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -384,7 +380,7 @@ body {
   color: var(--accent);
 }
 
-.nav-links a {
+nav a {
   color: var(--text-secondary);
   text-decoration: none;
   margin-left: 1.5rem;
@@ -392,11 +388,10 @@ body {
   transition: 0.3s;
 }
 
-.nav-links a:hover {
+nav a:hover {
   color: var(--accent);
 }
 
-/* --- HERO SECTION --- */
 .hero {
   padding: 80px 0;
 }
@@ -418,7 +413,6 @@ h1 {
   margin-bottom: 2rem;
 }
 
-/* Badge style "Terminal" pour le côté Kali/Passionné */
 .npm-badge {
   display: inline-flex;
   background: #000;
@@ -430,7 +424,7 @@ h1 {
 }
 
 .npm-badge span {
-  color: #fb7185; /* Couleur un peu vive pour l'alerte npm */
+  color: #fb7185;
   margin-right: 10px;
 }
 
@@ -438,7 +432,6 @@ h1 {
   color: var(--accent);
 }
 
-/* --- TITRES DE SECTION --- */
 .section-title {
   margin: 60px 0 30px;
   font-size: 1.8rem;
@@ -454,7 +447,6 @@ h1 {
   margin-left: 20px;
 }
 
-/* --- GRILLES & CARTES --- */
 .services-grid, .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -512,7 +504,7 @@ p {
   font-size: 0.9rem;
 }
 
-/* --- FORMULAIRE DE CONTACT --- */
+
 .contact-form {
   background: var(--bg-card);
   padding: 40px;
@@ -561,7 +553,6 @@ input:focus, textarea:focus {
   box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
 }
 
-/* --- FOOTER --- */
 footer {
   text-align: center;
   padding: 60px 0;
