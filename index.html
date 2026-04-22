@@ -1,179 +1,117 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="author" content="Elie PEMOLLET">  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <link rel="stylesheet" href="style.css">
-  <title>Portfolio de Elie PEMOLLET</title>
-</head>
-<body>
-  <div class="container">
-    <!-- navigation -->
-    <nav class="navbar">
-      <div class="logo">DEV PORTFOLIO</div>
-      <div class="nav-links">
-        <a href="#">Accueil</a>
-        <a href="#services">Projets</a>
-        <a href="#services-section">Services</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-
-    <!-- hero section / bienvenue -->
-    <div class="hero">
-      <div class="hero-content">
-        <h1>Bienvenue dans mon <span class="hero-highlight">portfolio</span> de développeur web indépendant.</h1>
-        <p>Spécialiste sites vitrines modernes et performants.</p>
-        <div class="npm-badge">
-          <span>⚡ npm install contact</span>
-          <code>→ devportfolio/contact</code>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Elie PEMOLLET">  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <link rel="stylesheet" href="style.css">
+        <title>Portfolio de Elie PEMOLLET</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo">Elie PEMOLLET</div>
+            <nav>
+                <a href="#">Accueil</a>
+                <a href="#projects-section">Projets</a>
+                <a href="#services-section">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Bienvenue dans mon <span class="hero-highlight">portfolio</span> de développeur web indépendant.</h1>
+                    <p>Spécialiste sites vitrines modernes et performants.</p>
+                    <div class="npm-badge">
+                        <span>⚡ npm install contact</span>
+                        <code>→ devportfolio/contact</code>
+                    </div>
+                </div>
+                <div style="flex:0.5; min-width: 140px;"></div>
+            </section>
+            <section id="services-section">
+                <h2 class="section-title">Mes Services</h2>
+                <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-tag">✨ vitrine & performance</div>
+                    <h3>Sites Vitrines</h3>
+                    <p>Sites one-page rapides et responsive, design sur mesure, expérience utilisateur optimisée.</p>
+                    <p></p>
+            </section>
+            <section class="projets-section" id="services">
+                <h2 class="section-title">Projets Réalisés</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h4>Sites Vitrines</h4>
+                        <div class="tech-stack">React | Tailwind | Node</div>
+                        <p>Landing page moderne pour une agence créative, responsive et animations fluides.</p>
+                        <a href="#" class="view-live">View Live →</a>
+                    </div>
+                    <div class="project-card">
+                        <h4>Développement Fullstack</h4>
+                        <div class="tech-stack">React | Tailwind | Node</div>
+                        <p>Plateforme de gestion de tâches avec dashboard, base de données PostgreSQL et JWT.</p>
+                        <a href="#" class="view-live">View Live →</a>
+                    </div>
+                    <div class="project-card">
+                        <h4>Marketplace E-sport</h4>
+                        <div class="tech-stack">React | Tailwind | Node</div>
+                        <p>Site communautaire avec paiements Stripe et back-end Node.js.</p>
+                        <a href="#" class="view-live">View Live →</a>
+                    </div>
+                    <div class="project-card">
+                        <h4>Portfolio Photographe</h4>
+                        <div class="tech-stack">React | Tailwind | Node</div>
+                        <p>Vitrine hautement optimisée, galerie dynamique et chargement instantané.</p>
+                        <a href="#" class="view-live">View Live →</a>
+                    </div>
+                </div>
+            </section>
+            <section id="contact">
+                <h2 class="section-title">Contactez-moi</h2>
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                        <input type="hidden" name="access_key" value="35147ce6-6ac9-4210-895a-26b782d48baf">
+                    <div class="typing-note">
+                        💬 Entrez votre message :
+                    </div>
+                    <div class="form-group">
+                        <label for="name">👤 Nom / Prénom</label>
+                        <input type="text" id="name" name="name" placeholder="Nave : Typing ..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">📧 Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">💬 Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Votre message détaillé..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-send">Send</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>© 2025 DEV PORTFOLIO — Développeur web indépendant. Tous droits réservés.</p>
+            <p style="margin-top: 0.5rem;">HTML · CSS · JavaScript · Performance first</p>
+        </footer>
         </div>
-      </div>
-      <!-- petite illustration symbolique (optionnelle) -->
-      <div style="flex:0.5; min-width: 140px;"></div>
-    </div>
-
-    <!-- MES SERVICES (section) -->
-    <div id="services-section">
-      <h2 class="section-title">Mes Services</h2>
-      <div class="services-grid">
-        <!-- Sites Vitrines -->
-        <div class="service-card">
-          <div class="service-tag">✨ vitrine & performance</div>
-          <h3>Sites Vitrines</h3>
-          <p>Sites one-page rapides et responsive, design sur mesure, expérience utilisateur optimisée.</p>
-          <p></p>
-        </div>
-        <!-- Développement Fullstack -->
-        <!-- <div class="service-card">
-          <div class="service-tag">🔧 applications complexes</div>
-          <h3>Fullstack</h3>
-          <p>Applications web évolutives, bases de données, API REST, authentification et logique métier.</p>
-          <div class="service-feature">📦 Stack moderne : React / Node / Tailwind</div>
-        </div>
-        <!-- Optimisation Performance + SEO -->
-        <!-- <div class="service-card">
-          <div class="service-tag">📈 SEO & rapidité</div>
-          <h3>Optimisation Performance</h3>
-          <p>Amélioration vitesse de chargement, SEO technique, Core Web Vitals, audits complets.</p>
-          <div class="service-feature">⭐ +40% de scores Lighthouse</div>
-        </div>
-      </div> -->
-    </div>
-
-    <!-- PROJETS RÉALISÉS (inspiré de la maquette : plusieurs cartes avec View Live) -->
-    <h2 class="section-title">Projets Réalisés</h2>
-    <div class="projects-grid">
-      <!-- Site vitrine exemple -->
-      <div class="project-card">
-        <h4>Sites Vitrines</h4>
-        <div class="tech-stack">React | Tailwind | Node</div>
-        <p>Landing page moderne pour une agence créative, responsive et animations fluides.</p>
-        <a href="#" class="view-live">View Live →</a>
-      </div>
-      <!-- Développement Fullstack -->
-      <div class="project-card">
-        <h4>Développement Fullstack</h4>
-        <div class="tech-stack">React | Tailwind | Node</div>
-        <p>Plateforme de gestion de tâches avec dashboard, base de données PostgreSQL et JWT.</p>
-        <a href="#" class="view-live">View Live →</a>
-      </div>
-      <!-- Projets Réalisés (troisième bloc) -->
-      <div class="project-card">
-        <h4>Marketplace E-sport</h4>
-        <div class="tech-stack">React | Tailwind | Node</div>
-        <p>Site communautaire avec paiements Stripe et back-end Node.js.</p>
-        <a href="#" class="view-live">View Live →</a>
-      </div>
-      <!-- Quatrième projet : "Projet Réalisé" (cohérent avec maquette) -->
-      <div class="project-card">
-        <h4>Portfolio Photographe</h4>
-        <div class="tech-stack">React | Tailwind | Node</div>
-        <p>Vitrine hautement optimisée, galerie dynamique et chargement instantané.</p>
-        <a href="#" class="view-live">View Live →</a>
-      </div>
-    </div>
-
-    <!-- SECTION CONTACT (avec le texte : "Entrez votre message :" + simulation de typing et email) -->
-    <div id="contact">
-      <h2 class="section-title">Contactez-moi</h2>
-      <div class="contact-form">
-        <!-- la maquette mentionne : "Entrez votre message :" puis [Nave : Typing ...] [Email : Email...] Message : [Send] -->
-        <div class="typing-note">
-          💬 Entrez votre message :
-        </div>
-        <!-- simulation du champ "Nave" (probablement Name) avec effet typing placeholder -->
-        <div class="form-group">
-          <label for="name">👤 Nom / Prénom</label>
-          <input type="text" id="name" placeholder="Nave : Typing ..." value="">
-        </div>
-        <div class="form-group">
-          <label for="email">📧 Email</label>
-          <input type="email" id="email" placeholder="Email..." value="">
-        </div>
-        <div class="form-group">
-          <label for="message">💬 Message</label>
-          <textarea id="message" rows="4" placeholder="Votre message détaillé..."></textarea>
-        </div>
-        <button class="btn-send" id="sendBtn">Send</button>
-        <p style="font-size: 0.75rem; margin-top: 1rem; color: #6c757d;">* Formulaire de démonstration — aucune donnée envoyée.</p>
-      </div>
-    </div>
-
-    <footer>
-      <p>© 2025 DEV PORTFOLIO — Développeur web indépendant. Tous droits réservés.</p>
-      <p style="margin-top: 0.5rem;">⚡ React · Tailwind · Node · Performance first</p>
-    </footer>
-  </div>
-
-  <!-- petit script pour interaction de notification amicale (feedback simple sans serveur) -->
-  <script>
-    (function() {
-      const sendButton = document.getElementById('sendBtn');
-      if (sendButton) {
-        sendButton.addEventListener('click', function(e) {
-          e.preventDefault();
-          const nameInput = document.getElementById('name');
-          const emailInput = document.getElementById('email');
-          const messageInput = document.getElementById('message');
-          
-          let nameVal = nameInput ? nameInput.value.trim() : '';
-          let emailVal = emailInput ? emailInput.value.trim() : '';
-          let msgVal = messageInput ? messageInput.value.trim() : '';
-          
-          if (!nameVal && !emailVal && !msgVal) {
-            alert("💡 Astuce : écrivez un petit message de test (champs vides). Remplissez au moins un champ pour simuler l'envoi.");
-            return;
-          }
-          
-          // petite simulation d'envoi (front uniquement)
-          alert(`✨ Message bien reçu ${nameVal ? nameVal : 'cher visiteur'} !\n\nJe vous répondrai rapidement à ${emailVal || 'votre adresse'}.\n\nMerci pour votre intérêt.`);
-          
-          // optionnel : reset partiel
-          if (messageInput) messageInput.value = '';
-          // on laisse le nom/email pour démo mais on peut les garder.
-        });
-      }
-
-      // pour un petit effet "typing" humoristique sur le champ nom (option)
-      const nameField = document.getElementById('name');
-      if (nameField && nameField.getAttribute('placeholder') === 'Nave : Typing ...') {
-        // ajouter un petit effet doux : on peut simuler un auto focus humour, mais ce n'est pas nécessaire
-        nameField.addEventListener('focus', () => {
-          if (nameField.value === '') {
-            // légère animation de placeholder? juste pour le style
-            nameField.placeholder = '✍️ écrivez votre nom...';
-          }
-        });
-        nameField.addEventListener('blur', () => {
-          if (nameField.value === '') {
-            nameField.placeholder = 'Nave : Typing ...';
-          }
-        });
-      }
-    })();
-  </script>
-</body>
+        <script>
+            (function() {
+                // Effet "typing" humoristique sur le champ nom (optionnel, pour le style)
+                const nameField = document.getElementById('name');
+                if (nameField && nameField.getAttribute('placeholder') === 'Nave : Typing ...') {
+                nameField.addEventListener('focus', () => {
+                    if (nameField.value === '') {
+                    nameField.placeholder = '✍️ écrivez votre nom...';
+                    }
+                });
+                nameField.addEventListener('blur', () => {
+                    if (nameField.value === '') {
+                    nameField.placeholder = 'Nave : Typing ...';
+                    }
+                });
+                }
+            })();
+        </script>
+    </body>
 </html>
-```
