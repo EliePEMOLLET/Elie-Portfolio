@@ -4,19 +4,28 @@
         <meta charset="UTF-8">
         <meta name="author" content="Elie PEMOLLET">  
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta name="description" content="Développeur web à Pointe-Noire (Congo). Création de sites internet vitrines et référencement Google Maps pour entreprises.">
+        <link rel="stylesheet" href="https://cloudflare.com">
         <link rel="stylesheet" href="style.css">
-        <title>Portfolio de Elie PEMOLLET</title>
+        <title>Elie Pemollet | Développeur Web Pointe-Noire</title>
     </head>
     <body>
         <header>
-            <div class="logo">Elie PEMOLLET</div>
-            <nav>
+            <div class="logo">Elie PEMOLLET</div>   
+                <div class="burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            <nav id="nav-menu">
                 <a href="#">Accueil</a>
                 <a href="#projects-section">Projets</a>
                 <a href="#services-section">Services</a>
                 <a href="#contact">Contact</a>
             </nav>
         </header>
+
         <main>
             <section class="hero">
                 <div class="hero-content">
@@ -29,42 +38,43 @@
                 </div>
                 <div style="flex:0.5; min-width: 140px;"></div>
             </section>
+            <section class="presentation-section">
+                <h2 class="section-title">À propos de moi</h2>
+
+                <p>Passionné par l'informatique et étudiant en Génie Informatique, Réseaux et Télécommunications à l'IUT-AC de Pointe-Noire, je mets mon expertise technique au service des entreprises locales.</p>
+                <p>
+                    Basé à Tié-Tié, j'accompagne les professionnels du Congo dans leur transformation numérique en créant des sites vitrines modernes, rapides et optimisés pour le référencement local. Mon objectif ? Transformer votre présence en ligne en un véritable levier de croissance, tout en garantissant la sécurité et la performance de vos outils digitaux.</p>
+            </section>
             <section id="services-section">
                 <h2 class="section-title">Mes Services</h2>
                 <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-tag">✨ vitrine & performance</div>
-                    <h3>Sites Vitrines</h3>
-                    <p>Chaque site raconte une histoire. La votre commence ici</p>
-                    <p>Je conçois et développe des sites vitrines qui convertissent, pas de templates, pas de copier-coller. </p>
-                    <p>Design pensé, code optimisé, résultat mesurables.</p>
+                    <div class="service-card">
+                        <div class="service-tag"> 🌐  Sites Vitrines</div>
+                            <p>Je crée des sites élégants pour présenter votre entreprise</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-tag">📍 Visibilité Google Maps </div>
+                            <p>J'aide vos clients à vous trouver physiquement grâce à Google My Business</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-tag">🛠️ Maintenance & Support</div>
+                            <p>Je m'occupe des mises à jour pour que vous n'ayez rien à faire."</p>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="projets-section" id="services">
                 <h2 class="section-title">Projets Réalisés</h2>
                 <div class="projects-grid">
                     <div class="project-card">
-                        <h4>Sites Vitrines</h4>
+                        <div class="scale">
+                        <img src="Images/Screenshot 2026-04-26 at 02-41-12 KIM-COOLING.png" alt=""></div>
+                        <h4>Interface Vitrine pour KIM-COOLING (Expertise Froid & Climatisation)</h4>
                         <div class="tech-stack">React | Tailwind | Node</div>
-                        <p>Landing page moderne pour une agence créative, responsive et animations fluides.</p>
-                        <a href="#" class="view-live">View Live →</a>
-                    </div>
-                    <div class="project-card">
-                        <h4>Développement Fullstack</h4>
-                        <div class="tech-stack">React | Tailwind | Node</div>
-                        <p>Plateforme de gestion de tâches avec dashboard, base de données PostgreSQL et JWT.</p>
-                        <a href="#" class="view-live">View Live →</a>
-                    </div>
-                    <div class="project-card">
-                        <h4>Marketplace E-sport</h4>
-                        <div class="tech-stack">React | Tailwind | Node</div>
-                        <p>Site communautaire avec paiements Stripe et back-end Node.js.</p>
-                        <a href="#" class="view-live">View Live →</a>
-                    </div>
-                    <div class="project-card">
-                        <h4>Portfolio Photographe</h4>
-                        <div class="tech-stack">React | Tailwind | Node</div>
-                        <p>Vitrine hautement optimisée, galerie dynamique et chargement instantané.</p>
-                        <a href="#" class="view-live">View Live →</a>
+                        <p>Iponterface professionnelle pour expert en froid industriel et climatisation résidentielle à Pointe-Noire.</p>
+                        <a href="Projet KIM-COOLING/index.html" class="view-live">Voir plus →</a>
                     </div>
                 </div>
             </section>
@@ -89,6 +99,8 @@
                     </div>
                     <button type="submit" class="btn-send">Send</button>
                 </form>
+                <a href="https://wa.me/242066703094" class="whatsapp-btn" target="_blank"> <i class="fab fa-whatsapp"></i> Contactez-moi sur WhatsApp </a>
+
             </section>
         </main>
         <footer>
@@ -113,6 +125,18 @@
                 });
                 }
             })();
+            const burger = document.getElementById('burger');
+            const navMenu = document.getElementById('nav-menu');
+
+            burger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                burger.classList.toggle('toggle');
+                });
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                });
+            });
         </script>
     </body>
 </html>

@@ -1,0 +1,739 @@
+:root {
+    --accent: #333;
+    --bg-card: #ffffffee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f6f7fb;
+    color: #222;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.1rem;
+    color: #48d1cc;
+}
+
+p {
+    font-size: 0.95rem;
+}
+
+main {
+    padding-top: 90px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo img {
+    width: 55px;
+}
+
+.logo span {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.menu_nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #111;
+    font-size: 0.95rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.menu_nav img {
+    width: 24px;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 26px;
+    height: 3px;
+    background-color: var(--accent);
+    transition: 0.3s;
+}
+
+
+#carousel {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carousel_content {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    animation: 24s carousel infinite;
+}
+
+.carousel_item {
+    width: 33.33%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel_item h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    position: relative;
+    top: 30%;
+}
+
+.carousel_item p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    position: relative;
+    top: 30%;
+}
+
+.carousel_item1 {
+    background-image: url('assets/images/main/carousel/slider-1-1.jpg');
+}
+
+.carousel_item2 {
+    background-image: url('assets/images/main/carousel/slider-2-1.jpg');
+}
+
+.carousel_item3 {
+    background-image: url('assets/images/main/carousel/climatisation.png');
+}
+
+@keyframes carousel {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-33.33%);
+    }
+
+    75% {
+        transform: translateX(-66.66%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.our_story {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: 50px 70px;
+}
+
+.card1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-basis: 50%;
+    background-color: lightgrey;
+    padding: 65px;
+}
+
+.card2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.img_cercle {
+    display: flex;
+}
+
+.card1
+.img_cercle img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 10% 10%;
+}
+
+.card2  img {
+    width: 270px;
+    height: 170px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.SERVICES {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.SERVICES_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 95px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.SERVICES_container .card {
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.SERVICES_container .card h3 {
+    color: black;
+}
+
+.SERVICES_container .card a {
+    padding: 10px 2px;
+    width: 150px;
+    border: none;
+    border-radius: 4px;
+    background-color: deepskyblue;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    transform: scale(1.1);
+    transition: 1s ;
+}
+
+.FORMATIONS {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.FORMATIONS_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.FORMATIONS_container .card {
+    padding: 20px;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+
+.FORMATIONS_container .card_rst {
+    padding: 25px;
+    background-color: #ededed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.FORMATIONS_container .card a {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #00bfff;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.card img {
+    width: 30px;
+}
+
+.PROJETS {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.PROJETS_P1 {
+    background-image: url(assets/images/main/why.choose.us/home-3.jpg);
+    width: 100%;
+    transform: scaleX(-1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: right;
+}
+
+.btn_blanc {
+    width: 225px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn_blanc img {
+    width: 25px;
+}
+
+.blanc {
+    color: white;
+}
+
+.PROJETS_P1_container {
+    transform: scaleX(-1);
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-left: 35px;
+    padding-top: 30px;
+}
+
+.why_choose_us {
+    display: flex;
+    gap: 15px;
+}
+
+.why_choose_us_card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.why_choose_us_logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.PROJETS_P2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.PROJETS_P2_caroussel {
+    overflow: hidden;
+    width: 100%;
+    height: 350px;
+}
+
+.img_partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_partners img {
+    width: 125px;
+}
+
+
+
+.carousel_item1_0 {
+    background-image: url('assets/images/main/carousel/slider-3.jpg');
+    background-size: cover;
+    background-position: end;
+    width: 400px;
+    height: 300px;
+}
+
+.carousel_item1_0::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    background-color: rgba(15, 12, 12, 0.5);
+
+}
+
+.CONTACTE {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ededed;
+    padding: 20px;
+}
+
+.contact_expert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 25px;
+}
+
+ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.planification {
+    background-color: white;
+    padding: 25px;
+    width: 50%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+footer {
+    background-color: black;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.footer_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_logo img {
+    width: 125px;
+}
+
+footer span {
+    color: white;
+}
+
+footer p {
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    .SERVICES_container,
+    .FORMATIONS_container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        width: 100%;
+    }
+
+    .our_story {
+        flex-direction: column;
+        margin: 100px 20px 40px;
+        gap: 30px;
+        width: auto;
+    }
+
+    .card1,
+    .card2 {
+        width: 100%;
+    }
+
+    .img_cercle {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .card2 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel_item h1 {
+        font-size: 2rem;
+    }
+
+    .carousel_item p {
+        font-size: 0.95rem;
+    }
+
+    .PROJETS_P1_container {
+        width: 70%;
+    }
+
+    .why_choose_us {
+        flex-wrap: wrap;
+    }
+
+    .img_partners {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 12px 18px;
+    }
+
+    .menu_nav {
+        gap: 15px;
+    }
+
+    nav {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        flex-direction: column;
+        background-color: #fff;
+        padding: 2rem;
+        gap: 1.5rem;
+        align-items: center;
+        justify-content: flex-start;
+        transition: right 0.35s ease;
+        z-index: 999;
+    }
+
+    nav a {
+        font-size: 1.1rem;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .menu_nav img {
+        display: none;
+    }
+
+    .carousel_content {
+        width: 300%;
+    }
+
+    .carousel_item {
+        width: 100%;
+        min-height: 260px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .carousel_item h1 {
+        font-size: 1.7rem;
+        top: 20%;
+    }
+
+    .carousel_item p {
+        font-size: 0.95rem;
+        top: 20%;
+    }
+
+    .our_story {
+        margin: 110px 15px 30px;
+    }
+
+    .card1 {
+        padding: 25px;
+    }
+
+    .SERVICES_container,
+    .FORMATIONS_container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .PROJETS_P1 {
+        height: auto;
+        min-height: 320px;
+        padding: 30px 0;
+    }
+
+    .PROJETS_P1_container {
+        width: 100%;
+        padding: 18px;
+    }
+
+    .why_choose_us {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .img_partners {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .CONTACTE {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .planification {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .footer_logo img {
+        width: 100px;
+    }
+
+    footer {
+        height: auto;
+        padding: 25px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 12px 14px;
+    }
+
+    .logo span {
+        font-size: 1rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .menu_nav {
+        gap: 12px;
+    }
+
+    #carousel {
+        height: auto;
+        min-height: 280px;
+    }
+
+    .carousel_item h1 {
+        font-size: 1.4rem;
+    }
+
+    .carousel_item p {
+        font-size: 0.9rem;
+    }
+
+    .SERVICES_container,
+    .FORMATIONS_container,
+    .our_story,
+    .CONTACTE,
+    .planification,
+    .PROJETS_P1_container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .planification {
+        padding: 18px;
+    }
+
+    .SERVICES_container .card button,
+    .FORMATIONS_container .card button,
+    .btn_blanc {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .PROJETS_P1 {
+        min-height: auto;
+        padding: 20px 0;
+    }
+
+    .PROJETS_P1_container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
